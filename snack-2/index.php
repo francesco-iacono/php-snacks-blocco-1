@@ -11,7 +11,7 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti
 */
   $name = $_GET["name"];
   $email = $_GET["email"];
-  $age = 20;
+  $age = $_GET["age"];;
  ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -23,7 +23,7 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti
    </head>
    <body>
      <?php if (!empty($email) && !empty($name) && !empty($age)) {
-              if (strpos($email, "@") && strpos($email, ".") && strlen($name) > 3) {
+              if (strpos($email, "@") && strpos($email, ".") && strlen($name) > 3 && is_numeric($age)) {
                 $message = "Accesso riuscito";
                 echo $message;
               } else {
