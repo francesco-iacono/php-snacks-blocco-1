@@ -10,6 +10,7 @@ Stampiamo a schermo tutte le partite con questo
 schema:
 Olimpia Milano - Cantù | 55 - 60
 */
+
   $matches = [
     [
       "homeTeam" => [
@@ -41,8 +42,38 @@ Olimpia Milano - Cantù | 55 - 60
         "points" => 84
       ],
     ],
+    [
+      "homeTeam" => [
+        "nameTeam" => "Allianz Pallacanestro Trieste",
+        "points" => 102
+      ],
+      "visitingTeam" => [
+        "nameTeam" => "Vanoli Basket Cremona",
+        "points" => 77
+      ],
+    ],
+    [
+      "homeTeam" => [
+        "nameTeam" => "Carpegna Prosciutto Pesaro",
+        "points" => 85
+      ],
+      "visitingTeam" => [
+        "nameTeam" => "Banco di Sardegna Sassari",
+        "points" => 95
+      ],
+    ],
+    [
+      "homeTeam" => [
+        "nameTeam" => "Virtus Segafredo Bologna",
+        "points" => 84
+      ],
+      "visitingTeam" => [
+        "nameTeam" => "Acqua S.Bernardo Cantù",
+        "points" => 65
+      ],
+    ],
   ];
-  var_dump($matches);
+  // var_dump($matches);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,12 +84,10 @@ Olimpia Milano - Cantù | 55 - 60
     <title>Document</title>
   </head>
   <body>
-    <h1><?php echo $matches[0]["homeTeam"]["nameTeam"]; ?></h1>
-    <h1><?php echo $matches[0]["visitingTeam"]["nameTeam"]; ?></h1>
+    <h1>1° Giornata -Andata</h1>
     <?php
-    for ($i=0; $i < $matches; $i++) {
-      echo $matches[$i]["homeTeam"]["nameTeam"];
-
+    for ($i=0; $i < count($matches); $i++) {
+      echo "<li>".$matches[$i]["homeTeam"]["nameTeam"]. " - " .$matches[$i]["visitingTeam"]["nameTeam"]. " | " .$matches[$i]["homeTeam"]["points"]. " - " .$matches[$i]["visitingTeam"]["points"]. "</li>";
     }
      ?>
 
