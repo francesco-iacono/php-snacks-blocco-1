@@ -9,8 +9,8 @@ conosciamo nella documentazione) che:
 Se tutto è ok stampare “Accesso riuscito”, altrimenti
 “Accesso negato”.
 */
-  $name = "pippo";
-  $email = "prova@mail.com";
+  $name = $_GET["name"];
+  $email = $_GET["email"];
   $age = 20;
  ?>
  <!DOCTYPE html>
